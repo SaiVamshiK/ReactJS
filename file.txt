@@ -1,0 +1,5 @@
+React is a single Page application.
+React uses the concept of virtual DOM and all the manipulations in the DOM which has to be done is done in the virtual DOM and this way it is 
+memory efficient. Only when there is a state change then React compares the virtual DOM with the real DOM and updates only those parts of the
+real DOM which needs a change.
+
