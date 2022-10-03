@@ -4,3 +4,12 @@ memory efficient. Only when there is a state change then React compares the virt
 real DOM which needs a change.
 
 To create a react app : npx create-react-app namaste-world
+Move to the folder and do : npm start to start the development server
+When we create a react app we get 3 folders :
+1. node_modules: all the dependencies will be there in this folder
+
+Components in React:
+1. Functional Components
+2. Class Components
+Components returns JSX(Javascript XML)
+JSX expressions must have only 1 parent element
