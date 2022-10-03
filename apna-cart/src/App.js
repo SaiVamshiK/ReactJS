@@ -7,14 +7,14 @@ import Footer from "./components/Footer";
 function App() {
   const products = [
     {
-      price : 10999,
+      price : 70000,
       model : 'IPhone 14',
-      quantity : 3
+      quantity : 0
     },
     {
-      price : 28374,
+      price : 97000,
       model : 'IPhone 14 max',
-      quantity : 2
+      quantity : 0
     }
   ]
   return (
