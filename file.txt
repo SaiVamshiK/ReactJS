@@ -13,3 +13,4 @@ Components in React:
 2. Class Components
 Components returns JSX(Javascript XML)
 JSX expressions must have only 1 parent element
+
