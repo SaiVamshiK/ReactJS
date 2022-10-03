@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class ProductList extends Component {
-    state = {  } 
-    render() { 
-        return (<></>);
-    }
+export default function ProductList() {
+  return (
+    <div>
+      
+    </div>
+  )
 }
- 
-export default ProductList;
