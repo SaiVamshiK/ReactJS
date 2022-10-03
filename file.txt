@@ -14,4 +14,5 @@ Components in React:
 Components returns JSX(Javascript XML)
 JSX expressions must have only 1 parent element
 
-Install simple react snippets and then do cc for class Component creation
+Install simple react snippets and then do cc for class Component creation, rfc for Functional Component creation
+Passing data from js to Component is done by using props. props are read only .
