@@ -1,10 +1,10 @@
 import React from "react";
+import Product from "./Product.js";
 
-export default function ProductList({products}) {
-  console.log(products);
+export default function ProductList(props) {
   return (
-    <div>
-
-    </div>
+    props.products.map((product) => {
+        return <Product product = {product}/>
+    })
   );
 }
