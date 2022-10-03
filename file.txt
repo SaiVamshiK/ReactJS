@@ -14,3 +14,4 @@ Components in React:
 Components returns JSX(Javascript XML)
 JSX expressions must have only 1 parent element
 
+Install simple react snippets and then do cc for class Component creation
