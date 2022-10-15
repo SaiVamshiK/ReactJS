@@ -4,6 +4,13 @@ Product which is passed from .js file to html file are props , props are read on
 for loops does not work in JSX
 IMP ** : Each child in a list should have a unique "key" prop whenever we loop in JSX, this key differentiaties one component from another component
 
+State in React : 
+If we want to make some changes to be reflected then we go with setState and useState.
+State is the DATA of a SPECIFIC COMPONENT.
+If we want to update that data then it can be done only via setState and useState functions.
+setState is important to call because it compares the virtual DOM and th real DOM and reflects the changes onto the real DOM.
+If we do not use setState and just update the variables it does not reflect in the UI.
+** If we want to make a state in functional component then we need to use state HOOK
 
 Extensions to be installed:
 preittier code formatter
