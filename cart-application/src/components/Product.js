@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Product(props) {
-  console.log("Product: " + props.product.name);
   return (
     <div className="row">
       <div className="col-5">
@@ -16,13 +15,13 @@ export default function Product(props) {
           role="group"
           aria-label="Basic mixed styles example"
         >
-          <button type="button" class="btn btn-danger">
+          <button type="button" class="btn btn-danger" >
             -
           </button>
           <button type="button" class="btn btn-warning">
             {props.product.quantity}
           </button>
-          <button type="button" class="btn btn-success">
+          <button type="button" class="btn btn-success" onClick={() => { props.incrementQuantity(props.index) }}>
             +
           </button>
         </div>
