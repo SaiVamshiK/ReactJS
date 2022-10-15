@@ -1,0 +1,12 @@
+npx create-react-app cart-application : to create the cart app
+npm install bootstrap : to install bootstrap
+Product which is passed from .js file to html file are props , props are read only in nature.
+for loops does not work in JSX
+IMP ** : Each child in a list should have a unique "key" prop whenever we loop in JSX
+
+
+Extensions to be installed:
+preittier code formatter
+ES7+ React/Redux
+Simple React snippets : cc to create a class component and rfc to create react functional component
+imr to import react
