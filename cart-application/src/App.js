@@ -50,6 +50,17 @@ function App() {
       setTotalAmount(curTotalAmount)
     }
   }
+
+  const resetButton = () => {
+    let newProductList = [...productList]
+    newProductList = newProductList.map((product) => {
+      product.quantity = 0
+      return product
+    })
+    setProductList(newProductList)
+    let newTotalAmount = 0
+    setTotalAmount(newTotalAmount)
+  }
   
 
   return (
@@ -58,7 +69,7 @@ function App() {
       <main className="container mt-5">
         <ProductList products={productList} incrementQuantity = {incrementQuantity} decrementQuantity ={decrementQuantity}/>
       </main>
-      <Footer totalAmount = {totalAmount}/>
+      <Footer totalAmount = {totalAmount} resetButton = {resetButton}/>
     </>
   );
 }
