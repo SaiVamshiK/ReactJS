@@ -23,6 +23,21 @@ function App() {
       name: "IPhone 13",
       quantity: 0,
     },
+    {
+      price: 7609,
+      name: "One Plus 13",
+      quantity: 0,
+    },
+    {
+      price: 7636,
+      name: "Redmi 13",
+      quantity: 0,
+    },
+    {
+      price: 1234,
+      name: "Samsung 13",
+      quantity: 0,
+    },
   ]
   let [productList,setProductList] = useState(products);
   let [totalAmount,setTotalAmount] = useState(0);
@@ -61,13 +76,26 @@ function App() {
     let newTotalAmount = 0
     setTotalAmount(newTotalAmount)
   }
+
+  const findIndexAmount = (productList,index) => {
+    return productList[index].quantity*productList[index].price
+  }
+
+  const removeProduct = (index) => {
+    let curTotalAmount = totalAmount
+    curTotalAmount -= findIndexAmount(productList,index)
+    let newProductList = [...productList]
+    newProductList = newProductList.filter((elem) => elem !== productList[index])
+    setProductList(newProductList)
+    setTotalAmount(curTotalAmount)
+  }
   
 
   return (
     <>
       <Navbar />
       <main className="container mt-5">
-        <ProductList products={productList} incrementQuantity = {incrementQuantity} decrementQuantity ={decrementQuantity}/>
+        <ProductList products={productList} incrementQuantity = {incrementQuantity} decrementQuantity ={decrementQuantity} removeProduct = {removeProduct}/>
       </main>
       <Footer totalAmount = {totalAmount} resetButton = {resetButton}/>
     </>
