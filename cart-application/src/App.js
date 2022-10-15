@@ -7,26 +7,28 @@ import Footer from "./components/Footer.js";
 function App() {
   const productList = [
     {
-      price : 43839,
-      name : "IPhone 14",
-      quantity : 2
+      price: 2000,
+      name: "IPhone 14",
+      quantity: 0,
     },
     {
-      price : 43787,
-      name : "IPhone 9",
-      quantity : 4
+      price: 1600,
+      name: "IPhone 9",
+      quantity: 0,
     },
     {
-      price : 81447,
-      name : "IPhone 13",
-      quantity : 1
-    }
-  ]
+      price: 2300,
+      name: "IPhone 13",
+      quantity: 0,
+    },
+  ];
   return (
     <>
       <Navbar />
-      <ProductList products = {productList}/>
-      <Footer/>
+      <main className="container mt-5">
+        <ProductList products={productList} />
+      </main>
+      <Footer />
     </>
   );
 }
