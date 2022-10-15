@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ProductList/>
+      <ProductList products = {productList}/>
       <Footer/>
     </>
   );
