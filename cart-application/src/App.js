@@ -26,17 +26,22 @@ function App() {
   ]
   let [productList,setProductList] = useState(products);
   const incrementQuantity = (index) => {
-    console.log("Increment q called")
     let newProductList = [...productList]
     newProductList[index].quantity++
-    console.log("New Q: "+newProductList[index].quantity)
     setProductList(newProductList)
+  }
+  const decrementQuantity = (index) => {
+    let newProductList = [...productList]
+    if(newProductList[index].quantity !== 0){
+      newProductList[index].quantity--;
+      setProductList(newProductList)
+    }
   }
   return (
     <>
       <Navbar />
       <main className="container mt-5">
-        <ProductList products={productList} incrementQuantity = {incrementQuantity}/>
+        <ProductList products={productList} incrementQuantity = {incrementQuantity} decrementQuantity ={decrementQuantity}/>
       </main>
       <Footer />
     </>

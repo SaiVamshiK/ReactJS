@@ -15,7 +15,7 @@ export default function Product(props) {
           role="group"
           aria-label="Basic mixed styles example"
         >
-          <button type="button" class="btn btn-danger" >
+          <button type="button" class="btn btn-danger" onClick={() => { props.decrementQuantity(props.index) }}>
             -
           </button>
           <button type="button" class="btn btn-warning">
