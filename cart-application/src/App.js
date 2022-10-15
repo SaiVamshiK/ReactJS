@@ -32,22 +32,22 @@ function App() {
     let newProductList = [...productList]
     newProductList[index].quantity++
     setProductList(newProductList)
-    totalAmount += newProductList[index].price
-    setTotalAmount(totalAmount)
-    // let curTotalAmount = totalAmount
-    // curTotalAmount += newProductList[index].price
-    // setTotalAmount(curTotalAmount)
+    // totalAmount += newProductList[index].price
+    // setTotalAmount(totalAmount)
+    let curTotalAmount = totalAmount
+    curTotalAmount += newProductList[index].price
+    setTotalAmount(curTotalAmount)
   }
   const decrementQuantity = (index) => {
     let newProductList = [...productList]
     if(newProductList[index].quantity !== 0){
       newProductList[index].quantity--;
       setProductList(newProductList)
-      totalAmount -= newProductList[index].price
-      setTotalAmount(totalAmount)
-      // let curTotalAmount = totalAmount
-      // curTotalAmount -= newProductList[index].price
-      // setTotalAmount(curTotalAmount)
+      // totalAmount -= newProductList[index].price
+      // setTotalAmount(totalAmount)
+      let curTotalAmount = totalAmount
+      curTotalAmount -= newProductList[index].price
+      setTotalAmount(curTotalAmount)
     }
   }
   
