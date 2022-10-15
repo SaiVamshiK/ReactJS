@@ -2,7 +2,7 @@ npx create-react-app cart-application : to create the cart app
 npm install bootstrap : to install bootstrap
 Product which is passed from .js file to html file are props , props are read only in nature.
 for loops does not work in JSX
-IMP ** : Each child in a list should have a unique "key" prop whenever we loop in JSX
+IMP ** : Each child in a list should have a unique "key" prop whenever we loop in JSX, this key differentiaties one component from another component
 
 
 Extensions to be installed:
