@@ -29,6 +29,7 @@ function App() {
     let newProductList = [...productList]
     newProductList[index].quantity++
     setProductList(newProductList)
+  
   }
   const decrementQuantity = (index) => {
     let newProductList = [...productList]
@@ -37,13 +38,14 @@ function App() {
       setProductList(newProductList)
     }
   }
+
   return (
     <>
       <Navbar />
       <main className="container mt-5">
         <ProductList products={productList} incrementQuantity = {incrementQuantity} decrementQuantity ={decrementQuantity}/>
       </main>
-      <Footer />
+      <Footer/>
     </>
   );
 }

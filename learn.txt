@@ -11,6 +11,7 @@ If we want to update that data then it can be done only via setState and useStat
 setState is important to call because it compares the virtual DOM and th real DOM and reflects the changes onto the real DOM.
 If we do not use setState and just update the variables it does not reflect in the UI.
 ** If we want to make a state in functional component then we need to use state HOOK
+** If we want to make state in class component then we need to use an object whereas in function we use a HOOK
 
 Extensions to be installed:
 preittier code formatter
