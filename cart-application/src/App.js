@@ -31,7 +31,17 @@ function App() {
   ];
   let [productList, setProductList] = useState(products);
   let [totalAmount, setTotalAmount] = useState(0);
-  let [productCount, setProductCount] = useState(products.length);
+  let [productCount, setProductCount] = useState(0);
+
+  let findProductCount = (products) => {
+    let count = 0;
+    for (let product of products) {
+      if (product.quantity > 0) {
+        count++;
+      }
+    }
+    return count;
+  };
 
   const incrementQuantity = (index) => {
     let newProductList = [...productList];
@@ -43,6 +53,9 @@ function App() {
     curTotalAmount += newProductList[index].price;
     setTotalAmount(curTotalAmount);
 
+    let newProductCount = productCount;
+    newProductCount = findProductCount(productList);
+    setProductCount(newProductCount);
   };
   const decrementQuantity = (index) => {
     let newProductList = [...productList];
@@ -55,6 +68,9 @@ function App() {
       curTotalAmount -= newProductList[index].price;
       setTotalAmount(curTotalAmount);
 
+      let newProductCount = productCount;
+      newProductCount = findProductCount(productList);
+      setProductCount(newProductCount);
     }
   };
 
@@ -68,6 +84,9 @@ function App() {
     let newTotalAmount = 0;
     setTotalAmount(newTotalAmount);
 
+    let newProductCount = productCount;
+    newProductCount = findProductCount(productList);
+    setProductCount(newProductCount);
   };
 
   const findIndexAmount = (productList, index) => {
@@ -84,9 +103,9 @@ function App() {
     setProductList(newProductList);
     setTotalAmount(curTotalAmount);
 
-    let newProductCount = productCount
-    newProductCount--;
-    setProductCount(newProductCount)
+    let newProductCount = productCount;
+    newProductCount = findProductCount(newProductList);
+    setProductCount(newProductCount);
   };
 
   const addProduct = (name, price) => {
@@ -97,15 +116,14 @@ function App() {
       quantity: 0,
     });
     setProductList(newProductList);
-
-    let newProductCount = productCount
-    newProductCount++;
-    setProductCount(newProductCount)
+    let newProductCount = productCount;
+    newProductCount = findProductCount(newProductList);
+    setProductCount(newProductCount);
   };
 
   return (
     <>
-      <Navbar productCount = {productCount}/>
+      <Navbar productCount={productCount} />
       <main className="container mt-5">
         <AddItem addProduct={addProduct} />
         <ProductList
